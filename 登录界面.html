@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    用户名：<input type="text">
+    密码：<input type="password">
+    <input type="button" value="登录" id="loginBtn">
+    <script>
+        $(function(){
+            $("#loginBtn").click(function(){
+                $.get("http://jx.xuzhixiang.top/ap/api/login.php",{
+                    username:$("input")
+                    .eq(0)
+                    .val(),
+                    password:$("input")
+                    .eq(1)
+                    .val()
+                }).then
+            })
+        })
+    </script>
+</body>
+</html>
